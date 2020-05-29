@@ -1,0 +1,8 @@
+<launch>
+ 
+    <!-- Load the parameters for the algorithm -->
+    <rosparam command="load" file="$(find biped_robot_e3_2a_training)/config/qlearn_params.yaml" />
+ 
+    <!-- Launch the training system -->
+    <node pkg="biped_robot_e3_2a_training" name="biped_gym" type="start_training_v2_biped.py" output="screen"/>
+</launch>
